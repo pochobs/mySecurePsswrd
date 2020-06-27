@@ -37,7 +37,7 @@ var passwrdLength = window.prompt("Choose from 8 - 128 the length of the passwor
 // make a while loop to fill the number of character choosen in the prompt
 // push each result to the empty array []
     while(result.length-1 <= passwrdLength) {
-        debugger;
+       
         randomUpperC = upperCase[Math.floor(Math.random()*upperCase.length)];
         randomLowerC = lowerCase[Math.floor(Math.random()*lowerCase.length)];
         randomnumeric = numeric[Math.floor(Math.random()*numeric.length)];
@@ -67,7 +67,11 @@ var passwrdLength = window.prompt("Choose from 8 - 128 the length of the passwor
             }
         }
     }
-
+    // Shuffle result
+    function shuffle(result) {
+        result.sort(() => Math.random() - 0.5);
+      }
+      shuffle(result)
     // var password = generatePassword();
     var passwordText = document.querySelector("#password");
     // shuffled = result.sort()
@@ -77,12 +81,7 @@ var passwrdLength = window.prompt("Choose from 8 - 128 the length of the passwor
     }
 
 
-// Add event listener to generate button
-
-
-//make random variables loop in the function
-
-
+//Event Listener Click start function
 generateBtn.addEventListener("click", writePassword);
 
 
