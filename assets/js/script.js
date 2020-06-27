@@ -18,6 +18,7 @@ var result = [];
 
 // Write password to the #password input
 function writePassword() {
+    result = [];
 //prompt ask for the lenght of the password to be generated    
 var passwrdLength = window.prompt("Choose from 8 - 128 the length of the password");
     if(passwrdLength < 8 || passwrdLength > 128) {
@@ -36,10 +37,11 @@ var passwrdLength = window.prompt("Choose from 8 - 128 the length of the passwor
 // make a while loop to fill the number of character choosen in the prompt
 // push each result to the empty array []
     while(result.length-1 <= passwrdLength) {
-        var randomUpperC = upperCase[Math.floor(Math.random()*upperCase.length)];
-        var randomLowerC = lowerCase[Math.floor(Math.random()*lowerCase.length)];
-        var randomnumeric = numeric[Math.floor(Math.random()*numeric.length)];
-        var randomspecChter = specialCh[Math.floor(Math.random()*specialCh.length)];
+        debugger;
+        randomUpperC = upperCase[Math.floor(Math.random()*upperCase.length)];
+        randomLowerC = lowerCase[Math.floor(Math.random()*lowerCase.length)];
+        randomnumeric = numeric[Math.floor(Math.random()*numeric.length)];
+        randomspecChter = specialCh[Math.floor(Math.random()*specialCh.length)];
         if(firstConfirm == true) {
             result.push(randomUpperC)
                 if(result.length==passwrdLength) {
@@ -68,8 +70,9 @@ var passwrdLength = window.prompt("Choose from 8 - 128 the length of the passwor
 
     // var password = generatePassword();
     var passwordText = document.querySelector("#password");
-    passwordText.value = result.join(""); // it will change ["A", "v", 0, 0, "&", "A", "U"];  into one string, so it will look like: "Av00&AU";
-    password = passwordText.value;
+    // shuffled = result.sort()
+    passwordText.value = result.join(""); 
+    // let password = passwordText.value;
      console.log(result)
     }
 
