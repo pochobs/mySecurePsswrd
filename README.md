@@ -48,6 +48,9 @@ Make click in the password generator bottom
 * How/where to download your program
 * Any modifications needed to be made to files/folders
 
+## Deploying link
+
+-url( https://pochobs.github.io/mySecurePsswrd/ )
 
 
 ## Help

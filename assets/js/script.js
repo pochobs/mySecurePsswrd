@@ -26,7 +26,7 @@ function writePassword() {
     // make a while loop to fill the number of character choosen in the prompt
     // push each result to the empty array []
     while(result.length-1 <= passwrdLength) {
-       
+       debugger;
         randomUpperC = upperCase[Math.floor(Math.random()*upperCase.length)];
         randomLowerC = lowerCase[Math.floor(Math.random()*lowerCase.length)];
         randomnumeric = numeric[Math.floor(Math.random()*numeric.length)];
